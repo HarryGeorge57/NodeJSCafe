@@ -72,3 +72,17 @@ Arrow functions were introduced in ES6.
 Arrow functions allow us to write shorter function syntax:
 
 let myFunction = (a, b) => a * b;
+
+
+# Testing Typescript
+https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/
+
+Mocha.js is a unit testing framework for JS and TS. Chai is an assertion library which works in tandem with any JS testing framework
+Chai leansa towards BDD however contains assertions for both TDD and BDD
+Compare use cases with actual results
+
+# TO DO
+Solve credentials error with functions
+Add reviews causes database function to activate
+Click view revies and the function triggers to pull DB data
+Once working create unit tests to test functionality.
