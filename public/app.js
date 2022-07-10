@@ -1,5 +1,6 @@
 const cafeList = document.querySelector('#cafe-list');
 const form = document.querySelector('#add-cafe-form');
+const cafeReviewList = document.querySelector('#cafeReview-list')
 
 // create element & render cafe
 function renderCafe(doc){
@@ -58,6 +59,7 @@ db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
         }
     });
 });
+    
 
 // updating records (console demo)
 // db.collection('cafes').doc('DOgwUvtEQbjZohQNIeMr').update({
