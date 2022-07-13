@@ -28,13 +28,6 @@ function renderCafe(doc){
     });
 }
 
-// getting data
-// db.collection('cafes').orderBy('city').get().then(snapshot => {
-//     snapshot.docs.forEach(doc => {
-//         renderCafe(doc);
-//     });
-// });
-
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -45,6 +38,11 @@ form.addEventListener('submit', (e) => {
     form.name.value = '';
     form.city.value = '';
 });
+
+//add reviews
+cafeReviewList.addEventListener('submit', (e) => {
+    functions.https.onRequest(reviewFunctions.ts)
+})
 
 // real-time listener
 db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
@@ -59,18 +57,3 @@ db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
         }
     });
 });
-    
-
-// updating records (console demo)
-// db.collection('cafes').doc('DOgwUvtEQbjZohQNIeMr').update({
-//     name: 'mario world'
-// });
-
-// db.collection('cafes').doc('DOgwUvtEQbjZohQNIeMr').update({
-//     city: 'hong kong'
-// });
-
-// setting data
-// db.collection('cafes').doc('DOgwUvtEQbjZohQNIeMr').set({
-//     city: 'hong kong'
-// });
